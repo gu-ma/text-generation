@@ -1,0 +1,1 @@
+docker build --tag transformer-text-gen:latest .
