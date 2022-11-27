@@ -127,9 +127,12 @@ class GenerateText(Resource):
                 gen_sentences.append(total_sentence)
 
             print(t2, t3, time.time() - t1 - t3, time.time() - t1)
-            
+
             results = jsonify(
-                prompt=prompt_text, sequences=gen_sequences, sentences=gen_sentences
+                prompt=prompt_text,
+                sequences=gen_sequences,
+                sentences=gen_sentences,
+                duration=time.time() - t1
             )
 
         else:
